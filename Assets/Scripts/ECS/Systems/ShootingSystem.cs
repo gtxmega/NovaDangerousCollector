@@ -25,7 +25,7 @@ namespace ECS.Systems
                 ref var weapon = ref _weaponFilter.Get1(i);
 
 
-                if (weapon.TargetActor != null)
+/*                if (weapon.TargetActor != null)
                 {
                     weapon.View.TargetLine.SetPosition(0, weapon.View.ProjectileSocket.position);
                     weapon.View.TargetLine.SetPosition(1, weapon.TargetActor.SelfTransform.position);
@@ -34,7 +34,7 @@ namespace ECS.Systems
                 {
                     weapon.View.TargetLine.SetPosition(0, weapon.View.ProjectileSocket.position);
                     weapon.View.TargetLine.SetPosition(1, weapon.View.ProjectileSocket.position);
-                }
+                }*/
 
                 if (weapon.IsReady && weapon.TargetActor != null)
                 {

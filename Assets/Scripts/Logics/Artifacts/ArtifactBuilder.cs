@@ -30,6 +30,8 @@ namespace Logics.Artifacts
                 DisplayImage = _config.DisplayImage
             });
 
+            _artifact.SetRare(_config.Rare);
+
             ref var artifactComponent = ref _entity.Get<ArtifactComponent>();
             artifactComponent.Owner = _owner;
             artifactComponent.Artifact = _artifact;
