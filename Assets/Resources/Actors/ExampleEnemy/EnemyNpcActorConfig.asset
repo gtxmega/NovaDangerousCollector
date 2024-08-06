@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d73d3a919b94934691fa0d60a1aefe3, type: 3}
+  m_Name: EnemyNpcActorConfig
+  m_EditorClassIdentifier: 
+  <MaxHealth>k__BackingField: 1024
+  <CurrentHealth>k__BackingField: 1024
+  <RegenerationHealth>k__BackingField: 5
+  <ActorView>k__BackingField: {fileID: 7210201907754856518, guid: 9a8b0b067099a2d4f9fe61bda95f08fb,
+    type: 3}
+  <Team>k__BackingField: 2
+  <EnemyTeams>k__BackingField: 01
+  <EnemyLayers>k__BackingField:
+    serializedVersion: 2
+    m_Bits: 64
+  <Armor>k__BackingField: 0
+  <BasePhysicResistance>k__BackingField: 0
+  <BaseMagicResistance>k__BackingField: 0

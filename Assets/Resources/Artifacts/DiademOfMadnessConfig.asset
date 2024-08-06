@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e6bc48f4c868b64197679d64909f0e2, type: 3}
+  m_Name: DiademOfMadnessConfig
+  m_EditorClassIdentifier: 
+  ArtifactName: Diadem Of Madness
+  <ArtifactDescription>k__BackingField: 
+  <DisplayImage>k__BackingField: {fileID: 21300000, guid: 923e9fa90db710c428fa9613ab92738e,
+    type: 3}
+  <Rare>k__BackingField: 3
+  <PassiveDecreaseHealth>k__BackingField: 3
+  <RestoreHealthPerKill>k__BackingField: 10
+  <BonusAttackSpeed>k__BackingField: 100
+  <BonusMoveSpeed>k__BackingField: 5
+  <MultiplierPassiveBonus>k__BackingField: 3
+  <Duration>k__BackingField: 10
+  <CooldownTime>k__BackingField: 25

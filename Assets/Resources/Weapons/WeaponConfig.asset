@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 430c57bbe45cf444786ad6f2565f5ed0, type: 3}
+  m_Name: WeaponConfig
+  m_EditorClassIdentifier: 
+  <AttackType>k__BackingField: 0
+  <DamageType>k__BackingField: 0
+  <Damage>k__BackingField: 5
+  <Reloads>k__BackingField: 1.2
+  <ReloadsSpeed>k__BackingField: 5
+  <ProjectileConfig>k__BackingField: {fileID: 11400000, guid: 1fee46f87e6ce5b4d962c165c2993e23,
+    type: 2}
+  <WeaponPrefab>k__BackingField: {fileID: 5236058833871921344, guid: 487329161638fa548acf291da3b5caca,
+    type: 3}

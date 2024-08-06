@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 430c57bbe45cf444786ad6f2565f5ed0, type: 3}
+  m_Name: AR-15_WeaponConfig
+  m_EditorClassIdentifier: 
+  <AttackType>k__BackingField: 0
+  <DamageType>k__BackingField: 1
+  <Damage>k__BackingField: 5
+  <Vampirism>k__BackingField: 0.1
+  <CriticalChance>k__BackingField: 5
+  <CriticalDamage>k__BackingField: 2
+  <Reloads>k__BackingField: 0.7
+  <RadiusOrder>k__BackingField: 5
+  <ReloadsSpeed>k__BackingField: 0
+  <ProjectileConfig>k__BackingField: {fileID: 11400000, guid: 94fdf5c4bf3d22840a5881c841184b67,
+    type: 2}
+  <CriticalProjectileConfig>k__BackingField: {fileID: 11400000, guid: 545942794224d71419a4119f8b1baf2c,
+    type: 2}
+  <WeaponPrefab>k__BackingField: {fileID: 2449507226356195270, guid: aded049c755949f4f803d1ec5777de4a,
+    type: 3}
