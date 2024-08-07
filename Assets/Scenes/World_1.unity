@@ -1637,6 +1637,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _spawnPoint: {fileID: 705863415}
   _entityConfig: {fileID: 11400000, guid: 99f4b09a70883e74c87c09316a86af8f, type: 2}
+  _weaponConfig: {fileID: 11400000, guid: 44c77c09439fe094c84fcc7593a8d135, type: 2}
+  _spawnCount: 5
+  _spawnRadius: 5
   _color: {r: 0.9433962, g: 0.04004982, b: 0.04004982, a: 0.9411765}
   _isDisplaying: 1
 --- !u!4 &705863415
@@ -1648,7 +1651,56 @@ Transform:
   m_GameObject: {fileID: 705863413}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.082, y: 0.5, z: -1.834}
+  m_LocalPosition: {x: 15.66, y: 0, z: 9.51}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &775748939
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 775748941}
+  - component: {fileID: 775748940}
+  m_Layer: 0
+  m_Name: Global Volume
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &775748940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775748939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IsGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: a6560a915ef98420e9faacc1c7438823, type: 2}
+--- !u!4 &775748941
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775748939}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2088,6 +2140,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _spawnPoint: {fileID: 964820005}
   _entityConfig: {fileID: 11400000, guid: 99f4b09a70883e74c87c09316a86af8f, type: 2}
+  _weaponConfig: {fileID: 11400000, guid: 44c77c09439fe094c84fcc7593a8d135, type: 2}
+  _spawnCount: 5
+  _spawnRadius: 5
   _color: {r: 0.9433962, g: 0.04004982, b: 0.04004982, a: 0.9411765}
   _isDisplaying: 1
 --- !u!4 &964820005
@@ -2099,7 +2154,7 @@ Transform:
   m_GameObject: {fileID: 964820003}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.82, y: 0.5, z: 2.38}
+  m_LocalPosition: {x: -5.26, y: 0, z: -12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2136,6 +2191,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _spawnPoint: {fileID: 994076523}
   _entityConfig: {fileID: 11400000, guid: 99f4b09a70883e74c87c09316a86af8f, type: 2}
+  _weaponConfig: {fileID: 11400000, guid: 44c77c09439fe094c84fcc7593a8d135, type: 2}
+  _spawnCount: 5
+  _spawnRadius: 5
   _color: {r: 0.9433962, g: 0.04004982, b: 0.04004982, a: 0.9411765}
   _isDisplaying: 1
 --- !u!4 &994076523
@@ -2147,7 +2205,7 @@ Transform:
   m_GameObject: {fileID: 994076521}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.239, y: 0.5, z: -0.607}
+  m_LocalPosition: {x: 18.77, y: 0, z: -0.65}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2471,6 +2529,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _spawnPoint: {fileID: 1212111132}
   _entityConfig: {fileID: 11400000, guid: 99f4b09a70883e74c87c09316a86af8f, type: 2}
+  _weaponConfig: {fileID: 11400000, guid: 44c77c09439fe094c84fcc7593a8d135, type: 2}
+  _spawnCount: 5
+  _spawnRadius: 5
   _color: {r: 0.9433962, g: 0.04004982, b: 0.04004982, a: 0.9411765}
   _isDisplaying: 1
 --- !u!4 &1212111132
@@ -2482,7 +2543,7 @@ Transform:
   m_GameObject: {fileID: 1212111130}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.323, y: 0.5, z: -1.579}
+  m_LocalPosition: {x: 5.06, y: 0, z: -12.17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2530,7 +2591,7 @@ Transform:
   m_GameObject: {fileID: 1287107178}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 1.678}
+  m_LocalPosition: {x: 3.23, y: 0.5, z: 0.56}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2678,7 +2739,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 2032
+    m_Bits: 4080
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -3091,6 +3152,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _spawnPoint: {fileID: 1726343735}
   _entityConfig: {fileID: 11400000, guid: 99f4b09a70883e74c87c09316a86af8f, type: 2}
+  _weaponConfig: {fileID: 11400000, guid: 44c77c09439fe094c84fcc7593a8d135, type: 2}
+  _spawnCount: 5
+  _spawnRadius: 5
   _color: {r: 0.9433962, g: 0.04004982, b: 0.04004982, a: 0.9411765}
   _isDisplaying: 1
 --- !u!4 &1726343735
@@ -3102,7 +3166,7 @@ Transform:
   m_GameObject: {fileID: 1726343733}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.04, y: 0.5, z: 2.62}
+  m_LocalPosition: {x: 14.95, y: 0, z: -10.05}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3315,6 +3379,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _spawnPoint: {fileID: 1805058876}
   _entityConfig: {fileID: 11400000, guid: 99f4b09a70883e74c87c09316a86af8f, type: 2}
+  _weaponConfig: {fileID: 11400000, guid: 44c77c09439fe094c84fcc7593a8d135, type: 2}
+  _spawnCount: 5
+  _spawnRadius: 5
   _color: {r: 0.9433962, g: 0.04004982, b: 0.04004982, a: 0.9411765}
   _isDisplaying: 1
 --- !u!4 &1805058876
@@ -3326,7 +3393,7 @@ Transform:
   m_GameObject: {fileID: 1805058874}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.45, y: 0.5, z: 2.38}
+  m_LocalPosition: {x: -12, y: 0, z: -4.64}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3468,6 +3535,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _spawnPoint: {fileID: 1887175773}
   _entityConfig: {fileID: 11400000, guid: 99f4b09a70883e74c87c09316a86af8f, type: 2}
+  _weaponConfig: {fileID: 11400000, guid: 44c77c09439fe094c84fcc7593a8d135, type: 2}
+  _spawnCount: 5
+  _spawnRadius: 5
   _color: {r: 0.9433962, g: 0.04004982, b: 0.04004982, a: 0.9411765}
   _isDisplaying: 1
 --- !u!4 &1887175773
@@ -3479,7 +3549,7 @@ Transform:
   m_GameObject: {fileID: 1887175771}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.82, y: 0.5, z: -0.04}
+  m_LocalPosition: {x: -3.99, y: 0, z: 13.56}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3923,6 +3993,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _spawnPoint: {fileID: 1986302999}
   _entityConfig: {fileID: 11400000, guid: 99f4b09a70883e74c87c09316a86af8f, type: 2}
+  _weaponConfig: {fileID: 11400000, guid: 44c77c09439fe094c84fcc7593a8d135, type: 2}
+  _spawnCount: 5
+  _spawnRadius: 5
   _color: {r: 0.9433962, g: 0.04004982, b: 0.04004982, a: 0.9411765}
   _isDisplaying: 1
 --- !u!4 &1986302999
@@ -3934,7 +4007,7 @@ Transform:
   m_GameObject: {fileID: 1986302997}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.366, y: 0.5, z: -1.868}
+  m_LocalPosition: {x: 6.19, y: 0, z: 14.43}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3971,6 +4044,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _spawnPoint: {fileID: 2006238491}
   _entityConfig: {fileID: 11400000, guid: 99f4b09a70883e74c87c09316a86af8f, type: 2}
+  _weaponConfig: {fileID: 11400000, guid: 44c77c09439fe094c84fcc7593a8d135, type: 2}
+  _spawnCount: 5
+  _spawnRadius: 5
   _color: {r: 0.9433962, g: 0.04004982, b: 0.04004982, a: 0.9411765}
   _isDisplaying: 1
 --- !u!4 &2006238491
@@ -3982,7 +4058,7 @@ Transform:
   m_GameObject: {fileID: 2006238489}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.45, y: 0.5, z: 0}
+  m_LocalPosition: {x: -10.26, y: 0, z: 5.47}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4223,6 +4299,7 @@ SceneRoots:
   - {fileID: 1479052591}
   - {fileID: 1905862315}
   - {fileID: 783721375}
+  - {fileID: 775748941}
   - {fileID: 1204926578}
   - {fileID: 2006238491}
   - {fileID: 1805058876}

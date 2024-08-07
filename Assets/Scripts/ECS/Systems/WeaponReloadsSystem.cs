@@ -1,5 +1,6 @@
 ﻿using ECS.Components;
 using ECS.Components.Attributes;
+using ECS.Mark;
 using Leopotam.Ecs;
 using UnityEngine;
 
@@ -14,7 +15,6 @@ namespace ECS.Systems
             foreach (var i in _weaponFilter)
             {
                 ref var weapon = ref _weaponFilter.Get1(i);
-
 
                 if (weapon.IsReady == false)
                 {

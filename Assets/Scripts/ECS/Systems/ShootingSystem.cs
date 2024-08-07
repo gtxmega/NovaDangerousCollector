@@ -1,5 +1,6 @@
 ﻿using ECS.Components;
 using ECS.Components.Attributes;
+using ECS.Mark;
 using Game.Types;
 using Leopotam.Ecs;
 using Services.Factory;
@@ -23,7 +24,6 @@ namespace ECS.Systems
             foreach (var i in _weaponFilter)
             {
                 ref var weapon = ref _weaponFilter.Get1(i);
-
 
 /*                if (weapon.TargetActor != null)
                 {
@@ -126,6 +126,7 @@ namespace ECS.Systems
 
                     weapon.IsReady = false;
                     weaponAttributes.ReloadsTimer = weaponAttributes.Reloads;
+                    weapon.View.PlayerShootVFX();
                 }
             }
         }

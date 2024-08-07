@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daa73075de605004cb573871db2ad673, type: 3}
   m_Name: PlayerActorConfig
   m_EditorClassIdentifier: 
-  <MaxHealth>k__BackingField: 128
-  <CurrentHealth>k__BackingField: 128
+  <MaxHealth>k__BackingField: 8888888
+  <CurrentHealth>k__BackingField: 8888888
   <RegenerationHealth>k__BackingField: 1
   <ActorView>k__BackingField: {fileID: 7731345145490114403, guid: 509c61a573b19fc47b8a275d2c786756,
     type: 3}

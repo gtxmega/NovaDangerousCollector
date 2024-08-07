@@ -4,6 +4,7 @@ using ECS.Mark;
 using Game.Types;
 using Leopotam.Ecs;
 using Logics.Displaying;
+using UnityEngine;
 
 namespace ECS.Systems
 {
@@ -42,6 +43,9 @@ namespace ECS.Systems
 
                             float totalDamage = damage.Amount;
 
+                            if (damage.Instigator.IsAlive() == false)
+                                continue;
+
                             ref var instigatorHealth = ref damage.Instigator.Get<HealthComponent>();
                             ref var instigatorGeneralAttributes = ref damage.Instigator.Get<GeneralAttributes>();
                             ref var instigatorView = ref damage.Instigator.Get<ViewComponent>();
@@ -76,9 +80,12 @@ namespace ECS.Systems
                         for (int j = 0; j < damageableComponent.DamageQueue.Count; ++j)
                         {
                             Damage damage = damageableComponent.DamageQueue.Dequeue();
+
+                            if (damage.Instigator.IsAlive() == false)
+                                continue;
+
                             healthComponent.Current -= damage.Amount;
                             generalTotalDamage += damage.Amount;
-
 
                             if (healthComponent.Current < 0.0f)
                             {

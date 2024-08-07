@@ -70,6 +70,8 @@ namespace Levels
                 .Add(new HealthIndicatorSystem(_locator.GetServices<CoordinatesUtility>(), _locator.GetServices<HealthIndicatorManager>()))
                 .Add(new ArtifactsCooldownSystem())
                 .Add(new DiademOfMadnessSystem())
+                .Add(new WeaponDestroySystem())
+                .Add(new ArtifactsDestroySystem())
                 .Add(new DestroyingSystem());
 
             _fixedUpdateSystems

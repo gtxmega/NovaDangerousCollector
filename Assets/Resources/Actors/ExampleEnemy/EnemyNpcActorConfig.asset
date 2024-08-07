@@ -22,6 +22,11 @@ MonoBehaviour:
   <EnemyLayers>k__BackingField:
     serializedVersion: 2
     m_Bits: 64
-  <Armor>k__BackingField: 0
-  <BasePhysicResistance>k__BackingField: 0
-  <BaseMagicResistance>k__BackingField: 0
+  <Damage>k__BackingField: 25
+  <Vampirism>k__BackingField: 0
+  <CriticalChance>k__BackingField: 0.1
+  <CriticalDamage>k__BackingField: 2.5
+  <AttackReloadsSpeed>k__BackingField: 0
+  <Armor>k__BackingField: 5
+  <BasePhysicResistance>k__BackingField: 0.1
+  <BaseMagicResistance>k__BackingField: 0.2

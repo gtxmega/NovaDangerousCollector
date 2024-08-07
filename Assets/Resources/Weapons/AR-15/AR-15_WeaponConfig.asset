@@ -18,7 +18,7 @@ MonoBehaviour:
   <Vampirism>k__BackingField: 0.1
   <CriticalChance>k__BackingField: 5
   <CriticalDamage>k__BackingField: 2
-  <Reloads>k__BackingField: 0.7
+  <Reloads>k__BackingField: 0.2
   <RadiusOrder>k__BackingField: 5
   <ReloadsSpeed>k__BackingField: 0
   <ProjectileConfig>k__BackingField: {fileID: 11400000, guid: 94fdf5c4bf3d22840a5881c841184b67,

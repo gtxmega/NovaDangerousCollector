@@ -1,4 +1,6 @@
-﻿using Services.Events;
+﻿using ECS.Components;
+using Leopotam.Ecs;
+using Services.Events;
 using Services.Factory;
 using Services.Factory.Builders;
 using Services.locator;
@@ -10,6 +12,9 @@ namespace Logics.Spawners
     {
         [SerializeField] private Transform _spawnPoint;
         [SerializeField] private EntityConfig _entityConfig;
+        [SerializeField] private WeaponConfig _weaponConfig;
+        [SerializeField] private int _spawnCount;
+        [SerializeField] private float _spawnRadius;
 
         private IActorFactory _actorFactory;
         private ILevelEvents _levelEvents;
@@ -24,7 +29,25 @@ namespace Logics.Spawners
 
         private void OnLevelStart()
         {
-            ref var entity = ref _actorFactory.CreateEntity(_entityConfig, _spawnPoint.position);
+            for (int i = 0; i < _spawnCount; ++i)
+            {
+                ref var entity = ref _actorFactory.CreateEntity(_entityConfig, GetRandomPositionIn(_spawnRadius));
+                ref var actorComponent = ref entity.Get<ActorComponent>();
+
+                Transform freeWeaponSocket = actorComponent.View.GetFreeWeaponSocket();
+                if (freeWeaponSocket != null)
+                {
+                    _actorFactory.CreateWeaponEntity(_weaponConfig, in entity, freeWeaponSocket);
+                }
+            }
+        }
+
+        private Vector3 GetRandomPositionIn(float radius)
+        {
+            Vector3 randomSpawnPosition = Random.insideUnitSphere * _spawnRadius;
+            randomSpawnPosition.y = _spawnPoint.position.y;
+
+            return _spawnPoint.position + randomSpawnPosition;
         }
 
         private void OnDestroy()
@@ -45,7 +68,7 @@ namespace Logics.Spawners
             if (_isDisplaying && _spawnPoint != null)
             {
                 Gizmos.color = _color;
-                Gizmos.DrawCube(_spawnPoint.position, Vector3.one);
+                Gizmos.DrawWireSphere(_spawnPoint.position, _spawnRadius);
             }
         }
 

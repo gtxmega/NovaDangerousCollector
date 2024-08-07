@@ -1,4 +1,5 @@
-﻿using ECS.Components.Attributes;
+﻿using ECS.Components;
+using ECS.Components.Attributes;
 using ECS.Mark;
 using Leopotam.Ecs;
 using Services.Factory.Builders;
@@ -17,6 +18,10 @@ namespace Logics.Actors
         public override void Make()
         {
             base.Make();
+
+            ref var actorCompoenent = ref _entity.Get<ActorComponent>();
+            actorCompoenent.View = _view;
+            actorCompoenent.SpawnPosition = _view.SelfTransform.position;
 
             ref var generalAttributes = ref _entity.Get<GeneralAttributes>();
             generalAttributes.Damage = _config.Damage;

@@ -27,6 +27,12 @@ namespace ECS.Systems
                     Object.Destroy(projectileComponent.View.gameObject);
                 }
 
+                if(entity.Has<WeaponComponent>())
+                {
+                    ref var weaponComponent = ref entity.Get<WeaponComponent>();
+                    Object.Destroy(weaponComponent.View.gameObject);
+                }
+
                 entity.Destroy();
             }
         }

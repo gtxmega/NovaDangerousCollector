@@ -12,6 +12,7 @@ namespace Logics.Views
         private void OnTriggerEnter(Collider other)
         {
             if (_isDied) return;
+            if (_entity.IsAlive() == false) return;
 
             if (other.TryGetComponent<ActorView>(out var actorView))
             {
