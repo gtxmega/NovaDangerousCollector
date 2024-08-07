@@ -32,6 +32,7 @@ namespace Services.Factory.Builders
 
             ref var viewComponent = ref _entity.Get<ViewComponent>();
             viewComponent.View = _view;
+            viewComponent.HealthWidgetOffset = _config.WidgetOffset;
 
             ref var damageableComponent = ref _entity.Get<DamageableComponent>();
             damageableComponent.DamageQueue = new();

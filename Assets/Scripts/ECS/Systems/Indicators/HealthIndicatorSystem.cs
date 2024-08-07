@@ -48,7 +48,7 @@ namespace ECS.Systems.Indicators
                 healthIndicatorComponent.Indicator.UpdateHealth(healthComponent.Current, healthComponent.Max);
 
                 Vector2 screenPosition = _coordinatesUtility.GetScreenPosition(viewComponent.View.SelfTransform.position);
-                healthIndicatorComponent.Indicator.SetPosition(screenPosition);
+                healthIndicatorComponent.Indicator.SetPosition(screenPosition + viewComponent.HealthWidgetOffset);
 
             }
         }

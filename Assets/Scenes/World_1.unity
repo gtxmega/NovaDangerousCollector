@@ -1350,7 +1350,7 @@ Transform:
   m_GameObject: {fileID: 564228041}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.5, z: 0}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
   m_LocalScale: {x: 10, y: 1, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1636,7 +1636,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spawnPoint: {fileID: 705863415}
-  _entityConfig: {fileID: 11400000, guid: 99f4b09a70883e74c87c09316a86af8f, type: 2}
+  _entityConfig: {fileID: 11400000, guid: 8c9fe650569f5a040891a5772561aea5, type: 2}
   _weaponConfig: {fileID: 11400000, guid: 44c77c09439fe094c84fcc7593a8d135, type: 2}
   _spawnCount: 5
   _spawnRadius: 5
@@ -2139,7 +2139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spawnPoint: {fileID: 964820005}
-  _entityConfig: {fileID: 11400000, guid: 99f4b09a70883e74c87c09316a86af8f, type: 2}
+  _entityConfig: {fileID: 11400000, guid: 8c9fe650569f5a040891a5772561aea5, type: 2}
   _weaponConfig: {fileID: 11400000, guid: 44c77c09439fe094c84fcc7593a8d135, type: 2}
   _spawnCount: 5
   _spawnRadius: 5
@@ -2190,7 +2190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spawnPoint: {fileID: 994076523}
-  _entityConfig: {fileID: 11400000, guid: 99f4b09a70883e74c87c09316a86af8f, type: 2}
+  _entityConfig: {fileID: 11400000, guid: 8c9fe650569f5a040891a5772561aea5, type: 2}
   _weaponConfig: {fileID: 11400000, guid: 44c77c09439fe094c84fcc7593a8d135, type: 2}
   _spawnCount: 5
   _spawnRadius: 5
@@ -2528,7 +2528,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spawnPoint: {fileID: 1212111132}
-  _entityConfig: {fileID: 11400000, guid: 99f4b09a70883e74c87c09316a86af8f, type: 2}
+  _entityConfig: {fileID: 11400000, guid: 8c9fe650569f5a040891a5772561aea5, type: 2}
   _weaponConfig: {fileID: 11400000, guid: 44c77c09439fe094c84fcc7593a8d135, type: 2}
   _spawnCount: 5
   _spawnRadius: 5
@@ -3151,7 +3151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spawnPoint: {fileID: 1726343735}
-  _entityConfig: {fileID: 11400000, guid: 99f4b09a70883e74c87c09316a86af8f, type: 2}
+  _entityConfig: {fileID: 11400000, guid: 8c9fe650569f5a040891a5772561aea5, type: 2}
   _weaponConfig: {fileID: 11400000, guid: 44c77c09439fe094c84fcc7593a8d135, type: 2}
   _spawnCount: 5
   _spawnRadius: 5
@@ -3378,7 +3378,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spawnPoint: {fileID: 1805058876}
-  _entityConfig: {fileID: 11400000, guid: 99f4b09a70883e74c87c09316a86af8f, type: 2}
+  _entityConfig: {fileID: 11400000, guid: 8c9fe650569f5a040891a5772561aea5, type: 2}
   _weaponConfig: {fileID: 11400000, guid: 44c77c09439fe094c84fcc7593a8d135, type: 2}
   _spawnCount: 5
   _spawnRadius: 5
@@ -3534,7 +3534,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spawnPoint: {fileID: 1887175773}
-  _entityConfig: {fileID: 11400000, guid: 99f4b09a70883e74c87c09316a86af8f, type: 2}
+  _entityConfig: {fileID: 11400000, guid: 8c9fe650569f5a040891a5772561aea5, type: 2}
   _weaponConfig: {fileID: 11400000, guid: 44c77c09439fe094c84fcc7593a8d135, type: 2}
   _spawnCount: 5
   _spawnRadius: 5
@@ -3992,7 +3992,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spawnPoint: {fileID: 1986302999}
-  _entityConfig: {fileID: 11400000, guid: 99f4b09a70883e74c87c09316a86af8f, type: 2}
+  _entityConfig: {fileID: 11400000, guid: 8c9fe650569f5a040891a5772561aea5, type: 2}
   _weaponConfig: {fileID: 11400000, guid: 44c77c09439fe094c84fcc7593a8d135, type: 2}
   _spawnCount: 5
   _spawnRadius: 5
@@ -4043,7 +4043,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spawnPoint: {fileID: 2006238491}
-  _entityConfig: {fileID: 11400000, guid: 99f4b09a70883e74c87c09316a86af8f, type: 2}
+  _entityConfig: {fileID: 11400000, guid: 8c9fe650569f5a040891a5772561aea5, type: 2}
   _weaponConfig: {fileID: 11400000, guid: 44c77c09439fe094c84fcc7593a8d135, type: 2}
   _spawnCount: 5
   _spawnRadius: 5

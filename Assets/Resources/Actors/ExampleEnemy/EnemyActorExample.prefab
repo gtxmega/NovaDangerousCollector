@@ -133,8 +133,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8698827127214875775}
-  - component: {fileID: 8151141009550239519}
-  - component: {fileID: 9175600122961857403}
   - component: {fileID: 2245417691324106964}
   - component: {fileID: 7210201907754856518}
   - component: {fileID: -5514000329662048296}
@@ -164,56 +162,6 @@ Transform:
   - {fileID: 7622219633774943673}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &8151141009550239519
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8494499369869841686}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &9175600122961857403
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8494499369869841686}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 4
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 2511f8d00132e56459befc7f8425bd0c, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!136 &2245417691324106964
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -250,12 +198,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <SelfTransform>k__BackingField: {fileID: 8698827127214875775}
+  <Team>k__BackingField: 2
   <WeaponSockets>k__BackingField:
   - {fileID: 4959960485878242053}
   - {fileID: 6391871974861718756}
   - {fileID: 1091283142249943652}
   - {fileID: 7622219633774943673}
-  <Team>k__BackingField: 2
 --- !u!54 &-5514000329662048296
 Rigidbody:
   m_ObjectHideFlags: 0

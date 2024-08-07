@@ -21,6 +21,9 @@ namespace Services.Factory.Builders
         [field: SerializeField] public ETeam[] EnemyTeams { get; private set; }
         [field: SerializeField] public LayerMask EnemyLayers { get; private set; }
 
+        [field: Header("UI")]
+        [field: SerializeField] public Vector2 WidgetOffset { get; private set; }
+
         public virtual EntityBuilder GetBuilder()
         {
             return new EntityBuilder(this);

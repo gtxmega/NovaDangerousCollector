@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d73d3a919b94934691fa0d60a1aefe3, type: 3}
+  m_Name: Npc_SphereRobot_ActorConfig
+  m_EditorClassIdentifier: 
+  <MaxHealth>k__BackingField: 512
+  <CurrentHealth>k__BackingField: 512
+  <RegenerationHealth>k__BackingField: 0
+  <ActorView>k__BackingField: {fileID: 3245726879151538621, guid: 71f93ffbf5dbeff418a07e69ce784dfc,
+    type: 3}
+  <Team>k__BackingField: 2
+  <EnemyTeams>k__BackingField: 01
+  <EnemyLayers>k__BackingField:
+    serializedVersion: 2
+    m_Bits: 64
+  <WidgetOffset>k__BackingField: {x: 0, y: 50}
+  <Damage>k__BackingField: 5
+  <Vampirism>k__BackingField: 0
+  <CriticalChance>k__BackingField: 0
+  <CriticalDamage>k__BackingField: 0
+  <AttackReloadsSpeed>k__BackingField: 0
+  <Armor>k__BackingField: 10
+  <BasePhysicResistance>k__BackingField: 0.25
+  <BaseMagicResistance>k__BackingField: 0.15

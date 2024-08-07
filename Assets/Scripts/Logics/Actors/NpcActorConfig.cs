@@ -6,6 +6,7 @@ namespace Logics.Actors
     [CreateAssetMenu(menuName = "Game/Actors/Npc", fileName = "NpcActorConfig")]
     public class NpcActorConfig : EntityConfig
     {
+        [field: Header("Attributes")]
         [field: SerializeField] public float Damage { get; internal set; }
         [field: SerializeField][field: Range(0.0f, 1.0f)] public float Vampirism { get; internal set; }
         [field: SerializeField][field: Range(0.0f, 1.0f)] public float CriticalChance { get; internal set; }
