@@ -10,6 +10,8 @@ namespace Logics.Artifacts
         [field: SerializeField] public Sprite DisplayImage { get; private set; }
         [field: SerializeField] public EArtifactRare Rare { get; private set; }
 
+        public virtual string GetPassiveBonusText() => string.Empty;
+        public virtual string GetActiveBonusText() => string.Empty;
         public virtual Artifact GetArtifactInstance() => new Artifact();
         public virtual ArtifactBuilder GetBuilder()
         {

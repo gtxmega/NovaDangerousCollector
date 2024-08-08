@@ -1,8 +1,8 @@
 ﻿namespace Game.Types
 {
-    public enum EArtifactRare : byte
+    public enum EArtifactRare : int
     {
-        None,
+        None = -1,
         Rare,
         Corrupted,
         Immortal,
