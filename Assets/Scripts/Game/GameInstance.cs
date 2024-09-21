@@ -9,7 +9,6 @@ namespace Game
     public class GameInstance : MonoBehaviour
     {
         [field: SerializeField] public GameConstants GameConstants { get; private set; }
-        [field: SerializeField] public LevelState LevelState { get; private set; }
 
         private Coroutine _loadingSceneCoroutine;
 
@@ -29,7 +28,7 @@ namespace Game
             LoadScene(GameConstants.FirstSceneIndex);
         }
 
-        private void LoadScene(int sceneIndex)
+        public void LoadScene(int sceneIndex)
         {
             if (_loadingSceneCoroutine != null)
                 throw new Exception("_loadingSceneCoroutine is not null!");

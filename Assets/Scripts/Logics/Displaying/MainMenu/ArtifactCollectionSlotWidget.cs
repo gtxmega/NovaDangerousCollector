@@ -5,12 +5,8 @@ using UnityEngine.UI;
 
 namespace Logics.Displaying.MainMenu
 {
-    public class ArtifactCollectionSlotWidget : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
+    public class ArtifactCollectionSlotWidget : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler, IPointerClickHandler
     {
-        [Header("Parameters")]
-        [SerializeField] private Sprite[] _artifactRareSprite;
-        [SerializeField] private Color[] _artifactTextColors;
-
         [Header("UI References")]
         [SerializeField] private TMP_Text _artifactNameText;
         [SerializeField] private Image _artifactDisplayImage;
@@ -23,11 +19,8 @@ namespace Logics.Displaying.MainMenu
 
         public void SetArtifactsCollection(ArtifactsCollection collection) => _artifactsCollection = collection;
         public void SetArtifactID(int artifactId) => _artifactId = artifactId;
-        public void SetRareWidget(int rare)
-        {
-            _rareImage.sprite = _artifactRareSprite[rare];
-            _artifactNameText.color = _artifactTextColors[rare];
-        }
+        public void SetRareImage(Sprite sprite) => _rareImage.sprite = sprite;
+        public void SetRareColor(Color color) => _artifactNameText.color = color;
 
         public void SetNameText(string name) => _artifactNameText.text = name;
         public void SetDisplayImage(Sprite displayImage) => _artifactDisplayImage.sprite = displayImage;
@@ -39,9 +32,10 @@ namespace Logics.Displaying.MainMenu
         {
             _artifactsCollection.OnBeginDragWidget(_artifactId);
         }
+
         public void OnDrag(PointerEventData eventData)
         {
-            
+            _artifactsCollection.OnDragWidget(_artifactId);
         }
 
         public void OnEndDrag(PointerEventData eventData)
@@ -51,6 +45,11 @@ namespace Logics.Displaying.MainMenu
             {
                 _selectedText.SetActive(true);
             }
+        }
+
+        public void OnPointerClick(PointerEventData eventData)
+        {
+            _artifactsCollection.OnClickCollectionWidget(_artifactId);
         }
     }
 }

@@ -7,6 +7,7 @@ namespace Logics.Artifacts
     {
         [field: SerializeField] public string ArtifactName;
         [field: SerializeField][field: TextArea(15, 35)] public string ArtifactDescription { get; private set; }
+        [field: SerializeField] public string PlanetName { get; private set; }
         [field: SerializeField] public Sprite DisplayImage { get; private set; }
         [field: SerializeField] public EArtifactRare Rare { get; private set; }
 

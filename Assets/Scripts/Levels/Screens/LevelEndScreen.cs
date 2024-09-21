@@ -9,6 +9,7 @@ namespace Levels.Screens
     {
         [SerializeField] private Canvas _screenCanvas;
         [SerializeField] private ELevelEndType _levelEndType;
+        [SerializeField] private Canvas[] _disableCanvases;
 
         private ILevelEvents _levelEvents;
 
@@ -29,7 +30,12 @@ namespace Levels.Screens
 
         protected virtual void OnEventExecute()
         {
+            for (int i = 0; i < _disableCanvases.Length; ++i)
+            {
+                _disableCanvases[i].enabled = false;
+            }
 
+            _screenCanvas.enabled = true;
         }
 
         private void OnDestroy()

@@ -14,6 +14,7 @@ namespace Logics.Displaying
         public bool IsCooldownState { get; private set; }
 
         [SerializeField] private Image _displayImage;
+        [SerializeField] private Image _rareImage;
         [SerializeField] private Image _cooldownImage;
         [SerializeField] private TMP_Text _cooldownText;
         [SerializeField] private EArtifactRare[] _slotRare;
@@ -24,10 +25,14 @@ namespace Logics.Displaying
         public void Inject(IServicesLocator locator)
         {
             _artifactCastEventsExec = locator.GetServices<IArtifactCastEventsUIExec>();
+            Hide();
         }
 
         public EArtifactRare[] GetSlotRare() => _slotRare;
         public EArtifactSlotUI GetArtifactSlotType() => _artifactSlotType;
+
+        public void Show() => gameObject.SetActive(true);
+        public void Hide() => gameObject.SetActive(false);
 
         public void SetNotEmptySlot()
         {
@@ -37,7 +42,7 @@ namespace Logics.Displaying
         }
 
         public void SetDisplayImage(Sprite displayImage) => _displayImage.sprite = displayImage;
-
+        public void SetRareImage(Sprite rareImage) => _displayImage.sprite = rareImage;
         public void UpdateCooldownProgress(float currentTimer, float maxTimer)
         {
             IsCooldownState = true;

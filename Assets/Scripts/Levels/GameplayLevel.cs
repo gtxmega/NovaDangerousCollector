@@ -18,7 +18,6 @@ namespace Levels
         [SerializeField] private GameplayServices _services;
 
         private EcsWorld _world;
-
         private EcsSystems _fixedUpdateSystems;
 
         private IServicesLocator _locator;

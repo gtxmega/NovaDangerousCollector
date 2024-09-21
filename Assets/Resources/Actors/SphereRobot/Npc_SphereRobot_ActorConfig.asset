@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d73d3a919b94934691fa0d60a1aefe3, type: 3}
   m_Name: Npc_SphereRobot_ActorConfig
   m_EditorClassIdentifier: 
-  <MaxHealth>k__BackingField: 512
-  <CurrentHealth>k__BackingField: 512
-  <RegenerationHealth>k__BackingField: 0
+  <MaxHealth>k__BackingField: 8
+  <CurrentHealth>k__BackingField: 8
+  <RegenerationHealth>k__BackingField: 1
   <ActorView>k__BackingField: {fileID: 3245726879151538621, guid: 71f93ffbf5dbeff418a07e69ce784dfc,
     type: 3}
   <Team>k__BackingField: 2
@@ -22,6 +22,8 @@ MonoBehaviour:
   <EnemyLayers>k__BackingField:
     serializedVersion: 2
     m_Bits: 64
+  <DisplayImage>k__BackingField: {fileID: 21300000, guid: 2bd154765c1dd0e419b4632821174792,
+    type: 3}
   <WidgetOffset>k__BackingField: {x: 0, y: 50}
   <Damage>k__BackingField: 5
   <Vampirism>k__BackingField: 0

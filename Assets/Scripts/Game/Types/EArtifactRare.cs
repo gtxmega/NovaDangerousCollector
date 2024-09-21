@@ -6,6 +6,7 @@
         Rare,
         Corrupted,
         Immortal,
-        Universe
+        Universe,
+        World
     }
 }

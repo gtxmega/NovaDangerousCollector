@@ -46,7 +46,7 @@ namespace ECS.Systems
                             if (damage.Instigator.IsAlive() == false)
                                 continue;
 
-                            ref var instigatorHealth = ref damage.Instigator.Get<HealthComponent>();
+                            
                             ref var instigatorGeneralAttributes = ref damage.Instigator.Get<GeneralAttributes>();
                             ref var instigatorView = ref damage.Instigator.Get<ViewComponent>();
 
@@ -64,8 +64,13 @@ namespace ECS.Systems
                             generalTotalDamage += totalDamage;
                             
                             float vampirism = totalDamage * instigatorGeneralAttributes.Vampirism;
-                            instigatorHealth.Current += vampirism;
-                            _damageIndicator.ShowHealthOnDisplay(vampirism, instigatorView.View.SelfTransform);
+
+                            if (vampirism > 0)
+                            {
+                                ref var instigatorHealth = ref damage.Instigator.Get<HealthComponent>();
+                                instigatorHealth.Current += vampirism;
+                                _damageIndicator.ShowHealthOnDisplay(vampirism, instigatorView.View.SelfTransform);
+                            }
 
                             if (healthComponent.Current < 0.0f)
                             {

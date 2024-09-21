@@ -33,6 +33,9 @@ namespace Logics.Displaying
             _offsetX = 30.0f;
             _offsetY = 0.0f;
 
+            _selfTransform
+                .DOPunchScale(Vector3.one * 1.3f, 0.3f);
+
             DOTween
                 .To(x => _alpha = x, 1.0f, 0.0f, _hideDuration)
                 .OnUpdate(() =>

@@ -28,7 +28,7 @@ namespace Logics.Actors
             generalAttributes.Vampirism = _config.Vampirism;
             generalAttributes.CriticalChance = _config.CriticalChance;
             generalAttributes.CriticalDamage = _config.CriticalDamage;
-            generalAttributes.ReloadsSpeed = _config.AttackReloadsSpeed;
+            generalAttributes.ReloadsSpeed = _config.AttackInterval;
             generalAttributes.Armor = _config.Armor;
 
             _entity.Get<SpawnMark>();

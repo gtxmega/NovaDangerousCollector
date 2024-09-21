@@ -23,6 +23,7 @@ namespace Levels
         private LevelEvents _levelEvents;
         private ArtifactCastEventsUI _artifactsCastEventsUI;
         private ActorFactory _actorFactory;
+        private AccoutrementsPlayer _accoutrementsPlayer;
 
         public void Init(GameInstance gameInstance, EcsWorld world)
         {
@@ -31,10 +32,11 @@ namespace Levels
             _levelEvents = new LevelEvents();
             _artifactsCastEventsUI = new ArtifactCastEventsUI();
             _actorFactory = new ActorFactory(world, _locator);
+            _accoutrementsPlayer = FindObjectOfType<AccoutrementsPlayer>();
+
 
             _locator
                 .Registration<GameInstance>(gameInstance)
-                .Registration<LevelState>(gameInstance.LevelState)
                 .Registration<GameConstants>(gameInstance.GameConstants)
                 .Registration<ILevelEvents>(_levelEvents)
                 .Registration<ILevelEventsExec>(_levelEvents)
@@ -45,7 +47,8 @@ namespace Levels
                 .Registration<HealthIndicatorManager>(_healthIndicatorManager)
                 .Registration<CoordinatesUtility>(_coordinatesUtility)
                 .Registration<LevelRewards>(_levelRewards)
-                .Registration<DamageIndicator>(_damageIndicator);
+                .Registration<DamageIndicator>(_damageIndicator)
+                .Registration<AccoutrementsPlayer>(_accoutrementsPlayer);
         }
 
         public void InjectToWorldObject()

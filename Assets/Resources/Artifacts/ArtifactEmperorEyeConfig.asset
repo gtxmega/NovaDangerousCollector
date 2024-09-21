@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ArtifactName: The Emperor's Eye
   <ArtifactDescription>k__BackingField: 
+  <PlanetName>k__BackingField: Proxy 2
   <DisplayImage>k__BackingField: {fileID: 21300000, guid: 2bd154765c1dd0e419b4632821174792,
     type: 3}
   <Rare>k__BackingField: 3

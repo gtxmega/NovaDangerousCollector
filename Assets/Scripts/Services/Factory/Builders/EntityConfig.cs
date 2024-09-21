@@ -22,6 +22,7 @@ namespace Services.Factory.Builders
         [field: SerializeField] public LayerMask EnemyLayers { get; private set; }
 
         [field: Header("UI")]
+        [field: SerializeField] public Sprite DisplayImage { get; private set; }
         [field: SerializeField] public Vector2 WidgetOffset { get; private set; }
 
         public virtual EntityBuilder GetBuilder()

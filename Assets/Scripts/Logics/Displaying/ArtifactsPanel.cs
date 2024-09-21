@@ -1,4 +1,5 @@
 ﻿using ECS.Components.Artifacts;
+using Game;
 using Game.Types;
 using Leopotam.Ecs;
 using Logics.Artifacts;
@@ -12,11 +13,14 @@ namespace Logics.Displaying
     {
         [SerializeField] private ArtifactUIWidget[] _artifactsWidget;
 
+        private GameConstants _gameConstants;
         private ILevelEvents _levelEvents;
 
         public void Inject(IServicesLocator locator)
         {
+            _gameConstants = locator.GetServices<GameConstants>();
             _levelEvents = locator.GetServices<ILevelEvents>();
+
             _levelEvents.PlayerReceivesArtifact += OnAddedArtifact;
         }
 
@@ -33,8 +37,10 @@ namespace Logics.Displaying
 
                 ArtifactDescription artifactDescription = artifact.Description;
 
+                emptyWidget.SetRareImage(_gameConstants.RareSprites[(int)artifact.ArtifactRare]);
                 emptyWidget.SetDisplayImage(artifactDescription.DisplayImage);
                 emptyWidget.SetNotEmptySlot();
+                emptyWidget.Show();
             }
         }
 

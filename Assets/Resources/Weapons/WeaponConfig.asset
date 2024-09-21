@@ -12,12 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 430c57bbe45cf444786ad6f2565f5ed0, type: 3}
   m_Name: WeaponConfig
   m_EditorClassIdentifier: 
+  <WeaponName>k__BackingField: Weapon example
+  <PlanetName>k__BackingField: example
+  <WeaponRare>k__BackingField: 1
   <AttackType>k__BackingField: 0
   <DamageType>k__BackingField: 0
   <Damage>k__BackingField: 5
+  <Vampirism>k__BackingField: 0
+  <CriticalChance>k__BackingField: 0
+  <CriticalDamage>k__BackingField: 0
   <Reloads>k__BackingField: 1.2
+  <RadiusOrder>k__BackingField: 0
   <ReloadsSpeed>k__BackingField: 5
   <ProjectileConfig>k__BackingField: {fileID: 11400000, guid: 1fee46f87e6ce5b4d962c165c2993e23,
     type: 2}
+  <CriticalProjectileConfig>k__BackingField: {fileID: 0}
   <WeaponPrefab>k__BackingField: {fileID: 5236058833871921344, guid: 487329161638fa548acf291da3b5caca,
     type: 3}

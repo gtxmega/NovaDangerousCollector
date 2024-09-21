@@ -1,4 +1,5 @@
 ﻿using ECS.Components.Artifacts;
+using ECS.Mark;
 using Leopotam.Ecs;
 
 namespace Logics.Artifacts
@@ -24,6 +25,8 @@ namespace Logics.Artifacts
                 emperorEyeComponent.EnemyAllResistanceReduce = _config.EnemyAllResistanceReduce;
             }
 
+
+            _entity.Get<SpawnMark>();
         }
     }
 }

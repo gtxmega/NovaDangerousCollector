@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daa73075de605004cb573871db2ad673, type: 3}
   m_Name: PlayerActorConfig
   m_EditorClassIdentifier: 
-  <MaxHealth>k__BackingField: 8888888
-  <CurrentHealth>k__BackingField: 8888888
-  <RegenerationHealth>k__BackingField: 1
+  <MaxHealth>k__BackingField: 64
+  <CurrentHealth>k__BackingField: 64
+  <RegenerationHealth>k__BackingField: 0.1
   <ActorView>k__BackingField: {fileID: 7731345145490114403, guid: 509c61a573b19fc47b8a275d2c786756,
     type: 3}
   <Team>k__BackingField: 1
@@ -22,10 +22,13 @@ MonoBehaviour:
   <EnemyLayers>k__BackingField:
     serializedVersion: 2
     m_Bits: 256
+  <WidgetOffset>k__BackingField: {x: 0, y: 0}
   <Damage>k__BackingField: 10
-  <CriticalChance>k__BackingField: 5
+  <CriticalChance>k__BackingField: 0.05
   <CriticalDamage>k__BackingField: 2
-  <Vampirism>k__BackingField: 0.1
-  <AttackReloadsSpeed>k__BackingField: 5
+  <Vampirism>k__BackingField: 0
+  <AttackInterval>k__BackingField: 0
   <Armor>k__BackingField: 5
+  <PhysicResistance>k__BackingField: 0.1
+  <MagicResistance>k__BackingField: 0.15
   <MoveSpeed>k__BackingField: 3
