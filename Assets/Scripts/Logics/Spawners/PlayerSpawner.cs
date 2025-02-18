@@ -1,8 +1,6 @@
 ﻿using ECS.Components;
-using ECS.Components.Artifacts;
 using Game;
 using Leopotam.Ecs;
-using Levels;
 using Logics.Actors;
 using Logics.Artifacts;
 using Services.Events;

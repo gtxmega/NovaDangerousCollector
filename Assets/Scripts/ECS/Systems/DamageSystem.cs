@@ -6,6 +6,7 @@ using Leopotam.Ecs;
 using Logics.Displaying;
 using UnityEngine;
 
+
 namespace ECS.Systems
 {
     public class DamageSystem : IEcsRunSystem
@@ -46,7 +47,7 @@ namespace ECS.Systems
                             if (damage.Instigator.IsAlive() == false)
                                 continue;
 
-                            
+
                             ref var instigatorGeneralAttributes = ref damage.Instigator.Get<GeneralAttributes>();
                             ref var instigatorView = ref damage.Instigator.Get<ViewComponent>();
 
@@ -62,7 +63,7 @@ namespace ECS.Systems
 
                             healthComponent.Current -= totalDamage;
                             generalTotalDamage += totalDamage;
-                            
+
                             float vampirism = totalDamage * instigatorGeneralAttributes.Vampirism;
 
                             if (vampirism > 0)
@@ -70,6 +71,11 @@ namespace ECS.Systems
                                 ref var instigatorHealth = ref damage.Instigator.Get<HealthComponent>();
                                 instigatorHealth.Current += vampirism;
                                 _damageIndicator.ShowHealthOnDisplay(vampirism, instigatorView.View.SelfTransform);
+                            }
+
+                            if(damage.IsCritical)
+                            {
+                                _damageIndicator.ShowCriticalDamageText(totalDamage, viewComponent.View.SelfTransform);
                             }
 
                             if (healthComponent.Current < 0.0f)
@@ -102,7 +108,6 @@ namespace ECS.Systems
 
                     if (generalTotalDamage > 0.0f)
                     {
-
                         _damageIndicator.ShowDamageOnDisplay(generalTotalDamage, viewComponent.View.SelfTransform);
                     }
 

@@ -14,8 +14,8 @@ namespace ECS.Systems
             foreach (var i in _weaponFilter)
             {
                 ref var weaponComponent = ref _weaponFilter.Get1(i);
-                
-                if(weaponComponent.Owner.IsAlive() == false)
+
+                if (weaponComponent.Owner.IsAlive() == false)
                 {
                     ref var weaponEntity = ref _weaponFilter.GetEntity(i);
                     weaponEntity.Get<DiedMark>();

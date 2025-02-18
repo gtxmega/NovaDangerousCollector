@@ -7,5 +7,6 @@ namespace Game.Types
         public float Amount;
         public EDamageType Type;
         public EcsEntity Instigator;
+        public bool IsCritical;
     }
 }

@@ -14,7 +14,7 @@ namespace ECS.Systems
             {
                 ref var weaponFilter = ref _weaponFilter.Get1(idx);
 
-                if(weaponFilter.Owner.Has<DiedMark>())
+                if (weaponFilter.Owner.Has<DiedMark>())
                 {
                     ref var weaponEntity = ref _weaponFilter.GetEntity(idx);
                     weaponEntity.Get<DiedMark>();

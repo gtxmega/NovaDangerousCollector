@@ -35,6 +35,15 @@ namespace Logics.Actors
             armorComponent.PhysicResistance = _config.BasePhysicResistance;
             armorComponent.MagicResistance = _config.BaseMagicResistance;
 
+            ref var ordersComponent = ref _entity.Get<OrdersComponent>();
+            ordersComponent.ChaseDistance = _config.ChaseDistance;
+            ordersComponent.RadiusReceiveOrders = _config.RadiusReceiveOrders;
+            ordersComponent.SpawnPosition = actorCompoenent.SpawnPosition;
+            ordersComponent.EnemyLayers = _config.EnemyLayers;
+
+            ref var movementComponent = ref _entity.Get<MovementComponent>();
+            movementComponent.Speed = _config.MoveSpeed;
+
             _entity.Get<SpawnMark>();
         }
     }

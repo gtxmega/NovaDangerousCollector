@@ -17,7 +17,7 @@ namespace Logics.Artifacts
         {
             base.Make();
 
-            if(_artifact is ArtifactDiademOfMadness diademOfMadness)
+            if (_artifact is ArtifactDiademOfMadness diademOfMadness)
             {
                 diademOfMadness.SetPassiveDecreaseHealth(_config.PassiveDecreaseHealth);
                 diademOfMadness.SetHealthPerKill(_config.RestoreHealthPerKill);

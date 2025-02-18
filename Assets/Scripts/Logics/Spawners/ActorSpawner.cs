@@ -18,11 +18,13 @@ namespace Logics.Spawners
 
         private IActorFactory _actorFactory;
         private ILevelEvents _levelEvents;
+        private ILevelEventsExec _levelEventsExec;
 
         public void Inject(IServicesLocator locator)
         {
             _actorFactory = locator.GetServices<IActorFactory>();
             _levelEvents = locator.GetServices<ILevelEvents>();
+            _levelEventsExec = locator.GetServices<ILevelEventsExec>();
 
             _levelEvents.LevelStart += OnLevelStart;
         }
@@ -39,6 +41,8 @@ namespace Logics.Spawners
                 {
                     _actorFactory.CreateWeaponEntity(_weaponConfig, in entity, freeWeaponSocket);
                 }
+
+                _levelEventsExec.OnActorSpawn(actorComponent.View);
             }
         }
 

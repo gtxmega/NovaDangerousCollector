@@ -1,5 +1,4 @@
 ﻿using Logics.Displaying;
-using UnityEngine;
 
 namespace ECS.Components
 {

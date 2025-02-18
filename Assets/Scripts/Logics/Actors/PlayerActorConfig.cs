@@ -19,9 +19,6 @@ namespace Logics.Actors
         [field: SerializeField][field: Range(0.0f, 1.0f)] public float PhysicResistance { get; private set; }
         [field: SerializeField][field: Range(0.0f, 1.0f)] public float MagicResistance { get; private set; }
 
-        [field: Header("Movement")]
-        [field: SerializeField] public float MoveSpeed { get; private set; }
-
         private string _attributeTextCached = string.Empty;
 
         public string GetAttributesText()
@@ -39,7 +36,7 @@ namespace Logics.Actors
                 sb.AppendLine("CriticalChance: " + (CriticalChance * 100.0f) + "%");
                 sb.AppendLine("CriticalDamage: " + CriticalDamage + "x");
                 sb.AppendLine("Vampirism: " + (Vampirism * 100.0f) + "%");
-                
+
                 sb.AppendLine(string.Empty);
                 sb.AppendLine("Physic resistance: " + (PhysicResistance * 100.0f) + "%");
                 sb.AppendLine("Magic resistance: " + (MagicResistance * 100.0f) + "%");

@@ -25,7 +25,7 @@ namespace Logics.Artifacts
 
         public override string GetPassiveBonusText()
         {
-            if(_passiveBonusTextCached == string.Empty)
+            if (_passiveBonusTextCached == string.Empty)
             {
                 StringBuilder stringBuilder = new StringBuilder();
                 stringBuilder.AppendLine("  Passively reduces health \n  by " + PassiveDecreaseHealth + " per second.");
@@ -57,7 +57,7 @@ namespace Logics.Artifacts
         {
             return new ArtifactDiademOfMadness();
         }
-        
+
         public override ArtifactBuilder GetBuilder()
         {
             return new ArtifactDiademOfMadnessBuilder(this);

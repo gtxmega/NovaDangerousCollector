@@ -83,7 +83,8 @@ namespace Logics.Displaying.MainMenu
                 sbActiveText.AppendLine(string.Empty);
 
                 _descriptionWidget.SetActiveBonusText(sbActiveText.ToString());
-            }else
+            }
+            else
             {
                 _descriptionWidget.SetActiveBonusText(string.Empty);
             }
@@ -125,7 +126,7 @@ namespace Logics.Displaying.MainMenu
                         countExitArtifacts++;
                 }
 
-                if(countExitArtifacts == 0 && _selectedWidgets[_currentArtifactWidgetID].CheckSetCondition(artifactRare))
+                if (countExitArtifacts == 0 && _selectedWidgets[_currentArtifactWidgetID].CheckSetCondition(artifactRare))
                 {
                     _selectedWidgets[_currentArtifactWidgetID].SetArtifact(artifactID);
                     _selectedWidgets[_currentArtifactWidgetID].SetRareImage(_gameConstants.RareSprites[(int)artifactRare]);

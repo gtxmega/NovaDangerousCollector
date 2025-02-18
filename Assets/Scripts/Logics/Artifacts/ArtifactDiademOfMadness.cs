@@ -1,7 +1,6 @@
 ﻿using ECS.Components;
 using ECS.Components.Artifacts;
 using ECS.Components.Attributes;
-using Game.Types;
 using Leopotam.Ecs;
 
 namespace Logics.Artifacts

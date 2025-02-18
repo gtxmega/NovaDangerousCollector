@@ -60,6 +60,7 @@ namespace Levels
             _fixedUpdateSystems
                 .Add(new InitializeArtifacSystem(_locator.GetServices<ILevelEventsExec>()))
                 .Add(new SearchEnemySystem(_locator.GetServices<GameConstants>()))
+                //.Add(new RadiusRecieveOrdersSystem(_locator.GetServices<GameConstants>()))
                 .Add(new WeaponLookToTargetSystem())
                 .Add(new ShootingSystem(_locator.GetServices<IActorFactory>()))
                 .Add(new ProjectileMovementSystem())
@@ -71,7 +72,7 @@ namespace Levels
                 .Add(new DiademOfMadnessSystem())
                 .Add(new WeaponDestroySystem())
                 .Add(new ArtifactsDestroySystem())
-                .Add(new DestroyingSystem());
+                .Add(new DestroyingSystem(_locator.GetServices<ILevelEventsExec>()));
 
             _fixedUpdateSystems
                 .OneFrame<SpawnMark>();

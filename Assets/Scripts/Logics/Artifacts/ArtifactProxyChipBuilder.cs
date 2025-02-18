@@ -1,8 +1,6 @@
 ﻿using ECS.Components.Artifacts;
 using ECS.Mark;
 using Leopotam.Ecs;
-using System.Collections;
-using UnityEngine;
 
 namespace Logics.Artifacts
 {

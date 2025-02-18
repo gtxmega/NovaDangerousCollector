@@ -21,6 +21,13 @@ namespace Services.Factory.Builders
         [field: SerializeField] public ETeam[] EnemyTeams { get; private set; }
         [field: SerializeField] public LayerMask EnemyLayers { get; private set; }
 
+        [field: Header("Orders")]
+        [field: SerializeField] public float RadiusReceiveOrders { get; private set; }
+        [field: SerializeField] public float ChaseDistance { get; private set; }
+
+        [field: Header("Movement")]
+        [field: SerializeField] public float MoveSpeed { get; private set; }
+
         [field: Header("UI")]
         [field: SerializeField] public Sprite DisplayImage { get; private set; }
         [field: SerializeField] public Vector2 WidgetOffset { get; private set; }

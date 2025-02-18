@@ -17,7 +17,7 @@ namespace Logics.Artifacts
         {
             base.Make();
 
-            if(_artifact is ArtifactEmperorEye emperorEye)
+            if (_artifact is ArtifactEmperorEye emperorEye)
             {
                 ref var emperorEyeComponent = ref _entity.Get<EmperorEyeComponent>();
                 emperorEyeComponent.EnemyDamageReduce = _config.EnemyDamageReduce;

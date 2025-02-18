@@ -26,6 +26,15 @@ namespace Services.Events
         public event Action<PlayerView> PlayerSpawnActor;
         public void OnPlayerSpawnActor(PlayerView view) => PlayerSpawnActor?.Invoke(view);
 
+        public event Action<ActorView> ActorSpawn;
+        public void OnActorSpawn(ActorView view) => ActorSpawn?.Invoke(view);
+
+        public event Action PlayerDie;
+        public void OnPlayerDie() => PlayerDie?.Invoke();
+
+        public event Action ActorDie;
+        public void OnActorDie() => ActorDie?.Invoke();
+
         #endregion
 
         #region Artifacts

@@ -10,7 +10,7 @@ namespace Logics.Artifacts
         public ArtifactDescription Description { get; private set; }
         public EArtifactSlotUI UISlotType { get; private set; }
         public ref EcsEntity GetEntity() => ref _entity;
-        
+
 
         protected EcsEntity _entity;
 
@@ -28,7 +28,7 @@ namespace Logics.Artifacts
 
         public virtual void ApplyPassiveBonusTo(in EcsEntity targetEntity)
         {
-            
+
         }
 
         public virtual void Deactivate(in EcsEntity targetEntity)

@@ -14,6 +14,7 @@ namespace Logics.Displaying
         [SerializeField] private TMP_Text _text;
 
         [Header("Animations")]
+        [SerializeField] private float _offset;
         [SerializeField] private float _hideDuration;
         [SerializeField] private float _speedY;
 
@@ -30,11 +31,14 @@ namespace Logics.Displaying
 
             gameObject.SetActive(true);
 
-            _offsetX = 30.0f;
-            _offsetY = 0.0f;
+            Vector2 randomOffset = UnityEngine.Random.insideUnitCircle * _offset;
+
+            _offsetX = randomOffset.x;
+            _offsetY = randomOffset.y;
 
             _selfTransform
-                .DOPunchScale(Vector3.one * 1.3f, 0.3f);
+                .DOPunchScale(Vector3.one * 1.3f, 0.3f)
+                .SetEase(Ease.OutBack);
 
             DOTween
                 .To(x => _alpha = x, 1.0f, 0.0f, _hideDuration)
@@ -48,7 +52,6 @@ namespace Logics.Displaying
         }
 
         public void Hide() => gameObject.SetActive(false);
-
         public void SetText(string text) => _text.text = text;
         public void SetUtility(CoordinatesUtility coordinatesUtility) => _coordinatesUtility = coordinatesUtility;
         public void SetTarget(Transform target) => _target = target;

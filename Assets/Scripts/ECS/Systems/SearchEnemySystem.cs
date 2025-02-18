@@ -1,5 +1,4 @@
 ﻿using ECS.Components;
-using ECS.Mark;
 using Game;
 using Leopotam.Ecs;
 using Logics.Views;
@@ -13,12 +12,9 @@ namespace ECS.Systems
 
         private Collider[] _enemyBuffer;
 
-        private readonly GameConstants _gameConstants;
-
         public SearchEnemySystem(GameConstants gameConstants)
         {
-            _gameConstants = gameConstants;
-            _enemyBuffer = new Collider[_gameConstants.EnemyBufferSize];
+            _enemyBuffer = new Collider[gameConstants.EnemyBufferSize];
         }
 
         public void Run()

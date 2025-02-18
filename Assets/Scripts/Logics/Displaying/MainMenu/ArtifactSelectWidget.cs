@@ -1,6 +1,5 @@
 ﻿using DG.Tweening;
 using Game.Types;
-using Services.locator;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -58,7 +57,7 @@ namespace Logics.Displaying.MainMenu
         {
             for (int i = 0; i < _neededRares.Length; ++i)
             {
-                if(_neededRares[i] == rare)
+                if (_neededRares[i] == rare)
                     return true;
             }
 
@@ -78,7 +77,7 @@ namespace Logics.Displaying.MainMenu
 
         public void OnPointerClick(PointerEventData eventData)
         {
-            if(IsEmpty == false)
+            if (IsEmpty == false)
                 _artifactsCollection.OnClickCollectionWidget(_artifactId);
         }
     }

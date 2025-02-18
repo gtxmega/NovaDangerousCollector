@@ -12,7 +12,7 @@ namespace Services.InputHandler
 
         public Vector3 GetMousePosition()
         {
-            if(Input.touchCount > 0)
+            if (Input.touchCount > 0)
             {
                 var touch = Input.GetTouch(0);
                 return touch.position;

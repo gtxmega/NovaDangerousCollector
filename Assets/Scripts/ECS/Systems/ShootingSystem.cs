@@ -1,6 +1,5 @@
 ﻿using ECS.Components;
 using ECS.Components.Attributes;
-using ECS.Mark;
 using Game.Types;
 using Leopotam.Ecs;
 using Services.Factory;
@@ -45,83 +44,52 @@ namespace ECS.Systems
                     float generalCriticalChance = generalAttributes.CriticalChance + weaponAttributes.CriticalChance;
                     float criticalDamage = generalAttributes.CriticalDamage + weaponAttributes.CriticalDamage;
 
+                    float totalDamage = weaponAttributes.Damage + generalAttributes.Damage;
+                    bool isCritical = false;
+                    var projectileConfig = weapon.ProjectileConfig;
 
-                    if (criticalHit <= generalCriticalChance)
+                    if(criticalHit <= generalCriticalChance)
                     {
-                        ref EcsEntity projectileEntity = ref _actorFactory.CreateProjectileEntity(weapon.CriticalProjectileConfig,
-                                                                                    weapon.Owner, weapon.ProjectileSocket);
-
-                        ref var projectile = ref projectileEntity.Get<ProjectileComponent>();
-
-                        projectile.Damage = new Damage()
-                        {
-                            Amount = (weaponAttributes.Damage + generalAttributes.Damage) * criticalDamage,
-                            Instigator = weapon.Owner,
-                            Type = weaponAttributes.DamageType
-                        };
-
-                        projectile.Target = weapon.TargetActor;
-
-                        switch (weapon.AttackType)
-                        {
-                            case EAttackType.NONTARGET:
-
-                                Vector3 targetPosition = weapon.TargetActor.SelfTransform.position;
-                                Vector3 direction = targetPosition - weapon.View.ProjectileSocket.position;
-                                direction.Normalize();
-
-                                projectile.IsTargetMove = false;
-                                projectile.EndPosition = targetPosition + direction * (weaponAttributes.RadiusOrder / 2);
-
-                                break;
-                            case EAttackType.TARGET:
-
-                                projectile.IsTargetMove = true;
-
-                                break;
-                            case EAttackType.MELEE:
-
-                                break;
-                        }
+                        projectileConfig = weapon.CriticalProjectileConfig;
+                        isCritical = true;
+                        totalDamage *= criticalDamage;
                     }
-                    else
-                    {
-                        ref EcsEntity projectileEntity = ref _actorFactory.CreateProjectileEntity(weapon.ProjectileConfig,
+
+                    ref EcsEntity projectileEntity = ref _actorFactory.CreateProjectileEntity(projectileConfig,
                                                                                     weapon.Owner, weapon.ProjectileSocket);
+                    
+                    ref var projectile = ref projectileEntity.Get<ProjectileComponent>();
 
-                        ref var projectile = ref projectileEntity.Get<ProjectileComponent>();
+                    projectile.Damage = new Damage()
+                    {
+                        Amount = totalDamage,
+                        Instigator = weapon.Owner,
+                        Type = weaponAttributes.DamageType,
+                        IsCritical = isCritical
+                    };
 
-                        projectile.Damage = new Damage()
-                        {
-                            Amount = weaponAttributes.Damage + generalAttributes.Damage,
-                            Instigator = weapon.Owner,
-                            Type = weaponAttributes.DamageType
-                        };
+                    projectile.Target = weapon.TargetActor;
 
-                        projectile.Target = weapon.TargetActor;
+                    switch (weapon.AttackType)
+                    {
+                        case EAttackType.NONTARGET:
 
-                        switch (weapon.AttackType)
-                        {
-                            case EAttackType.NONTARGET:
+                            Vector3 targetPosition = weapon.TargetActor.SelfTransform.position;
+                            Vector3 direction = targetPosition - weapon.View.ProjectileSocket.position;
+                            direction.Normalize();
 
-                                Vector3 targetPosition = weapon.TargetActor.SelfTransform.position;
-                                Vector3 direction = targetPosition - weapon.View.ProjectileSocket.position;
-                                direction.Normalize();
+                            projectile.IsTargetMove = false;
+                            projectile.EndPosition = targetPosition + direction * (weaponAttributes.RadiusOrder / 2);
 
-                                projectile.IsTargetMove = false;
-                                projectile.EndPosition = targetPosition + direction * (weaponAttributes.RadiusOrder / 2);
+                            break;
+                        case EAttackType.TARGET:
 
-                                break;
-                            case EAttackType.TARGET:
+                            projectile.IsTargetMove = true;
 
-                                projectile.IsTargetMove = true;
+                            break;
+                        case EAttackType.MELEE:
 
-                                break;
-                            case EAttackType.MELEE:
-
-                                break;
-                        }
-
+                            break;
                     }
 
                     weapon.IsReady = false;

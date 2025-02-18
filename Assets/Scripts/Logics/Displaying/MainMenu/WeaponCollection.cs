@@ -66,11 +66,11 @@ namespace Logics.Displaying.MainMenu
             sbWeaponAttributeText.AppendLine("  Attributes");
             sbWeaponAttributeText.AppendLine(string.Empty);
             sbWeaponAttributeText.AppendLine(_weaponConfigs[weaponID].GetAttributeString());
-            
+
             _descriptionWidget.SetPassiveBonusText(sbWeaponAttributeText.ToString());
 
             string uniqueAttributeString = _weaponConfigs[weaponID].GetUniqueAttributeString();
-            if(uniqueAttributeString != string.Empty)
+            if (uniqueAttributeString != string.Empty)
             {
                 StringBuilder sbWeaponUniqueAttributeText = new StringBuilder();
                 sbWeaponUniqueAttributeText.AppendLine("---------------------------------");
@@ -80,7 +80,8 @@ namespace Logics.Displaying.MainMenu
                 sbWeaponUniqueAttributeText.AppendLine(string.Empty);
 
                 _descriptionWidget.SetActiveBonusText(sbWeaponUniqueAttributeText.ToString());
-            }else
+            }
+            else
             {
                 _descriptionWidget.SetActiveBonusText(string.Empty);
             }

@@ -12,5 +12,8 @@ namespace Services.Events
         event Action<ELevelEndType> LevelEnd;
         event Action<Artifact> PlayerReceivesArtifact;
         event Action LevelLoaded;
+        event Action<ActorView> ActorSpawn;
+        event Action PlayerDie;
+        event Action ActorDie;
     }
 }

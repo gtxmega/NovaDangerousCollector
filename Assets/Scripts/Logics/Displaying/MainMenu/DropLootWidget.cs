@@ -17,7 +17,7 @@ namespace Logics.Displaying.MainMenu
 
         public virtual void OnPointerClick(PointerEventData eventData)
         {
-            
+
         }
     }
 }

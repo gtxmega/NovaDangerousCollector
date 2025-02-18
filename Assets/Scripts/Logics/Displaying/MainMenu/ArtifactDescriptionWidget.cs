@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Text;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -66,7 +65,7 @@ namespace Logics.Displaying.MainMenu
         }
 
         public void SetDisplayImage(Sprite displayImage) => _artifactDisplayImage.sprite = displayImage;
-        
+
         public void SetPassiveBonusText(string passBonusText)
         {
             _artifactPassiveBonusText.text = passBonusText;

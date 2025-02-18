@@ -68,16 +68,16 @@ MonoBehaviour:
       m_Calls: []
   m_text: 0
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1bc7bd501a2c3254e9d3af7d5760b71d, type: 2}
-  m_sharedMaterial: {fileID: 8012043989391129712, guid: 1bc7bd501a2c3254e9d3af7d5760b71d,
+  m_fontAsset: {fileID: 11400000, guid: 7e6ada4a71862b74f967b0fa15785e0f, type: 2}
+  m_sharedMaterial: {fileID: 3455097797464479316, guid: 7e6ada4a71862b74f967b0fa15785e0f,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4280946677
-  m_fontColor: {r: 0.9607843, g: 0.0588235, b: 0.16640711, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -94,8 +94,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32
-  m_fontSizeBase: 32
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -150,5 +150,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _selfTransform: {fileID: 172244166398371308}
   _text: {fileID: 8542412482381792348}
-  _hideDuration: 0.8
-  _speedY: 55
+  _offset: 100
+  _hideDuration: 1
+  _speedY: 15

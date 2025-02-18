@@ -52,7 +52,7 @@ namespace Logics.Displaying.MainMenu
 
         public void OnEndDrag(PointerEventData eventData)
         {
-            if(_weaponCollection.OnEndDragWidget(_weaponID))
+            if (_weaponCollection.OnEndDragWidget(_weaponID))
             {
                 _selectedText.SetActive(true);
             }

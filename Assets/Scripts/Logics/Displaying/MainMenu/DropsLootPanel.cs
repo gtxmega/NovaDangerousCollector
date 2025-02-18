@@ -12,7 +12,7 @@ namespace Logics.Displaying.MainMenu
         {
             for (int i = 0; i < _widgets.Length; ++i)
             {
-                if(i < countWidgets)
+                if (i < countWidgets)
                     _widgets[i].Show();
                 else
                     _widgets[i].Hide();

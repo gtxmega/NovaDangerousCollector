@@ -45,6 +45,16 @@ namespace Logics.Displaying
             widget.Show();
         }
 
+        public void ShowCriticalDamageText(float damage, Transform target)
+        {
+            DamageText widget = GetDamageText();
+
+            widget.SetText("<color=#EE204D>Critical damage: " + Mathf.RoundToInt(damage).ToString());
+            widget.SetTarget(target);
+            widget.ShowComplete += ReturnToPool;
+            widget.Show();
+        }
+
         public void ShowHealthOnDisplay(float health, Transform target)
         {
             DamageText widget = GetDamageText();
@@ -60,8 +70,7 @@ namespace Logics.Displaying
             if (_damageIndicatorPool.Count > 0)
             {
                 return _damageIndicatorPool.Dequeue();
-            }
-            else
+            }else
             {
                 return CreateWidget();
             }

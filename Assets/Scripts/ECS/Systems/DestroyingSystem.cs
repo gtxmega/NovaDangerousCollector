@@ -1,6 +1,7 @@
 ﻿using ECS.Components;
 using ECS.Mark;
 using Leopotam.Ecs;
+using Services.Events;
 using UnityEngine;
 
 namespace ECS.Systems
@@ -9,11 +10,26 @@ namespace ECS.Systems
     {
         private EcsFilter<DiedMark> _diedFilter;
 
+        private readonly ILevelEventsExec _levelEventsExec;
+
+        public DestroyingSystem(ILevelEventsExec levelEventsExec)
+        {
+            _levelEventsExec = levelEventsExec;
+        }
+
         public void Run()
         {
             foreach (var i in _diedFilter)
             {
                 ref var entity = ref _diedFilter.GetEntity(i);
+
+                if (entity.Has<PlayerComponent>())
+                {
+                    _levelEventsExec.OnPlayerDie();
+                }else if(entity.Has<ActorComponent>())
+                {
+                    _levelEventsExec.OnActorDie();
+                }
 
                 if (entity.Has<ViewComponent>())
                 {
@@ -27,7 +43,7 @@ namespace ECS.Systems
                     Object.Destroy(projectileComponent.View.gameObject);
                 }
 
-                if(entity.Has<WeaponComponent>())
+                if (entity.Has<WeaponComponent>())
                 {
                     ref var weaponComponent = ref entity.Get<WeaponComponent>();
                     Object.Destroy(weaponComponent.View.gameObject);

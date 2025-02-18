@@ -68,7 +68,8 @@ namespace Logics.Displaying.MainMenu
                 }
 
                 _descriptionWidget.ShowArtifactsDropsPanel(artifacts.Length);
-            }else
+            }
+            else
             {
                 _descriptionWidget.HideArtifactsDropsPanel();
             }
@@ -89,7 +90,8 @@ namespace Logics.Displaying.MainMenu
                 }
 
                 _descriptionWidget.ShowWeaponDropsPanel(weapons.Length);
-            }else
+            }
+            else
             {
                 _descriptionWidget.HideWeaponsDropsPanel();
             }
@@ -107,7 +109,8 @@ namespace Logics.Displaying.MainMenu
                 }
 
                 _descriptionWidget.ShowPopulationPanel(populations.Length);
-            }else
+            }
+            else
             {
                 _descriptionWidget.HidePopulationPanel();
             }

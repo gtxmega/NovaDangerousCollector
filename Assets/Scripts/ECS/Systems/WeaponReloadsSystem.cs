@@ -1,6 +1,5 @@
 ﻿using ECS.Components;
 using ECS.Components.Attributes;
-using ECS.Mark;
 using Leopotam.Ecs;
 using UnityEngine;
 

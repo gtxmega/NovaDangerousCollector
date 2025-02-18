@@ -9,7 +9,7 @@ namespace Game
     {
         [SerializeField] private ArtifactsCollection _artifactsCollection;
         [SerializeField] private WeaponCollection _weaponCollection;
-        
+
         private GameInstance _gameInstance;
         private IMenuEvents _menuEvents;
         private AccoutrementsPlayer _accoutrementsPlayer;
